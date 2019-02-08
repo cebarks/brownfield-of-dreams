@@ -21,6 +21,14 @@ class GithubService
     end
   end
 
+  def email(github_user)
+    json = get_json("/users/#{github_user}")
+
+    return nil if json[:message] == "Not Found"
+    
+    GithubUser.new(json).email
+  end
+
   private
 
   def get_json(path)

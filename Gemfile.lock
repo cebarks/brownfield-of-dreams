@@ -112,6 +112,8 @@ GEM
     declarative-option (0.1.0)
     diff-lcs (1.3)
     docile (1.3.1)
+    domain_name (0.5.20180417)
+      unf (>= 0.0.5, < 1.0.0)
     erubi (1.8.0)
     execjs (2.7.0)
     factory_bot (4.11.1)
@@ -146,6 +148,8 @@ GEM
       signet (~> 0.7)
     hashdiff (0.3.8)
     hashie (3.6.0)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
     httpclient (2.8.3)
     i18n (1.5.3)
       concurrent-ruby (~> 1.0)
@@ -168,6 +172,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
+    mailgun-ruby (1.1.11)
+      rest-client (~> 2.0.2)
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
     memoist (0.16.0)
@@ -183,6 +189,7 @@ GEM
     multi_json (1.13.1)
     multi_xml (0.6.0)
     multipart-post (2.0.0)
+    netrc (0.11.0)
     nio4r (2.3.1)
     nokogiri (1.10.1)
       mini_portile2 (~> 2.4.0)
@@ -251,6 +258,10 @@ GEM
       declarative (< 0.1.0)
       declarative-option (< 0.2.0)
       uber (< 0.2.0)
+    rest-client (2.0.2)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     retriable (3.1.2)
     rspec-core (3.8.0)
       rspec-support (~> 3.8.0)
@@ -315,6 +326,9 @@ GEM
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uber (0.1.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.5)
     vcr (4.0.0)
     web-console (3.7.0)
       actionview (>= 5.0)
@@ -362,6 +376,7 @@ DEPENDENCIES
   jquery
   launchy
   listen (>= 3.0.5, < 3.2)
+  mailgun-ruby (~> 1.1.6)
   omniauth-census!
   omniauth-github!
   omniauth-google-oauth2

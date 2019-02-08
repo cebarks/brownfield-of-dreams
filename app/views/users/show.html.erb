@@ -1,5 +1,6 @@
 <section class="dashboard-main">
   <h1> <%= current_user.first_name %>'s Dashboard </h1>
+  <%= link_to 'Send an Invite', new_invite_path %>
   <%= button_to 'Connect to Github', "/auth/github"%>
   <%= button_to 'Log Out', logout_path, method: 'delete', class: "btn btn-primary mb1 bg-teal" %>
   <h3>Account Details</h3>
@@ -14,6 +15,7 @@
   <section>
     <h1>Bookmarked Segments</h1>
   </section>
+
   <div>
 <% if @facade.videos.present? %>
       <ul>
