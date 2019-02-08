@@ -1,10 +1,11 @@
 class GithubUser
-  attr_reader :handle, :url
+  attr_reader :handle, :url, :email
 
   def initialize(attributes)
     @handle = attributes[:login]
     @url = attributes[:html_url]
     @id = attributes[:id]
+    @email = attributes[:email]
   end
 
   def exists_in_database?
