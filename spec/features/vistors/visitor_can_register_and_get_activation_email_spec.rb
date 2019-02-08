@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe 'vister can create an account', :js do
   it 'sends actiavion email' do
+    ActionMailer::Base.deliveries = []
     email = 'jimbob@aol.com'
     first_name = 'Jim'
     last_name = 'Bob'
