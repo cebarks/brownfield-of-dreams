@@ -94,9 +94,13 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  # config.action_mailer.delivery_method = :mailgun
-  # config.action_mailer.mailgun_settings = {
-  #   api_key: ENV["MG_API_KEY"],
-  #   domain: 'brownfield.io'
-  # }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :authentication => :plain,
+    :address => "smtp.mailgun.org",
+    :port => 587,
+    :domain => ENV["MG_DOMAIN"],
+    :user_name => ENV["MG_USER_NAME"],
+    :password => ENV["MG_PASSWORD"]
+  }
 end
