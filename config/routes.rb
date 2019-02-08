@@ -35,6 +35,8 @@ Rails.application.routes.draw do
 
   get '/auth/github/callback', to: 'github/sessions#create'
 
+  get '/invite', to: 'invites#new', as: 'new_invite'
+  post '/invite', to: 'invites#create', as: 'invite'
 
   # Is this being used?
   get '/video', to: 'video#show'
